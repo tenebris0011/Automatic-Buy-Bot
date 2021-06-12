@@ -7,11 +7,9 @@ file = './assets/config.ini'
 
 def automateBestBuy():
     options = webdriver.ChromeOptions()
-    # options.headless = True
-    driver = webdriver.Chrome(executable_path='C:\\Users\\Nathan\\PycharmProjects\\webscraper\\assets\\chromedriver.exe', options=options)
+    driver = webdriver.Chrome(executable_path=path['selenium'], options=options)
     driver.maximize_window()
     driver.get("https://www.bestbuy.com/site/nvidia-geforce-rtx-3070-8gb-gddr6-pci-express-4-0-graphics-card-dark-platinum-and-black/6429442.p?skuId=6429442")
-    # driver.get("https://www.bestbuy.com/site/dynex-5-w-usb-wall-charger-white/6403449.p?skuId=6403449")
 
     buyButton = False
 
@@ -73,5 +71,6 @@ if __name__ == '__main__':
     config.read(file)
     account = config['login']
     card = config['card']
+    path = config['drivers']
 
     automateBestBuy()
