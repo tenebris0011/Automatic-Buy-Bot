@@ -1,4 +1,4 @@
-# FScalpersBot
+# Automatic-Buy-Bot
 
 This program was written to allow for the automatting of buying a product on the bestbuy website.
 
