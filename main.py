@@ -9,7 +9,7 @@ def automateBestBuy():
     options = webdriver.ChromeOptions()
     driver = webdriver.Chrome(executable_path=path['selenium'], options=options)
     driver.maximize_window()
-    driver.get("https://www.bestbuy.com/site/nvidia-geforce-rtx-3070-8gb-gddr6-pci-express-4-0-graphics-card-dark-platinum-and-black/6429442.p?skuId=6429442")
+    driver.get(path[url])
 
     buyButton = False
 
@@ -72,5 +72,6 @@ if __name__ == '__main__':
     account = config['login']
     card = config['card']
     path = config['drivers']
+    path = config['link']
 
     automateBestBuy()
